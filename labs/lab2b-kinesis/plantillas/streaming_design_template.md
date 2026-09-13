@@ -1,7 +1,7 @@
 # Diseño de streaming — Lab 2b
 
-**Curso:** ST1630-2026-2 · **Semana:** S7 · **Fecha:** _(completar)_
-**Estudiante:** _(nombre y correo @eafit.edu.co)_
+**Curso:** ST1630-2026-2 · **Semana:** S7 · **Fecha:**
+**Estudiante:** 
 
 > Copia este archivo a tu carpeta de entrega como `streaming_design.md`
 > y complétalo después de tener `streaming_pipeline.py` corriendo
