@@ -9,7 +9,12 @@ credentials
 __pycache__/
 *.pyc
 .venv/
+.venv-python/
+.venv-cache/
+.venv-linux/
+.lab2b/
 venv/
+hadoop/
 
 # Notebooks
 .ipynb_checkpoints/
