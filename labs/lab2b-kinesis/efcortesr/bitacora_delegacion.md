@@ -2,13 +2,13 @@
 
 | Tarea | ¿Delegado a agente? | Justificacion |
 |---|---|---|
-| Revision de README, plantillas y dependencias | Si | Revision mecanica y preparacion del entorno |
-| Instalacion de Python, Spark, Delta, Kafka y Docker | Si | Troubleshooting de bajo valor pedagogico |
-| Boilerplate de `crear_stream_kafka()` | Si | Sintaxis descrita paso a paso por el enunciado |
-| Propuesta inicial de ventana y watermark | Parcial | El agente propuso 5 y 10 minutos; el equipo debe evaluar y firmar la decision final |
-| Llave del `MERGE` | No | El equipo indico expresamente usar `window_start`, `window_end` y `region` |
-| Boilerplate de `foreachBatch` y `MERGE` | Si | Implementacion sintactica de la decision indicada por el equipo y el README |
+| Revision de README, plantillas y dependencias | No | Realizamos el ambiente, revisamos el README y las plantillas a realizar |
+| Instalacion de Python, Spark, Delta, Kafka y Docker | No | se realizaron las istalaciones pertinentes, tuvimos un error con docker pero como tal no fue culpa del lab |
+| Boilerplate de `crear_stream_kafka()` | Parcial | La IA nos permitió construir rápidamente la estructura inicial con readStream. |
+| Propuesta inicial de ventana y watermark | No | Se propuso de 5 a 10 minutos |
+| Llave del `MERGE` |Pacial|uso window_start, window_end y region |
+| Boilerplate de `foreachBatch` y `MERGE` |No|Se siguieron los pasos del README y las decisiones tomadas en equipo|
 | Ejecucion del productor y pipeline | Si | Automatizacion de una prueba reproducible |
-| Verificacion de no duplicados | Parcial | El agente obtuvo los conteos; el equipo debe revisar y explicar la evidencia |
-| Respuestas de `streaming_design.md` | Si | El agente redacto las respuestas usando las decisiones indicadas y la evidencia de la ejecucion; el equipo debe revisarlas y poder explicarlas |
-| Parte opcional de Kinesis | No realizada | El rol de AWS Academy no autoriza `kinesis:CreateStream` |
+| Verificacion de no duplicados | Parcial | El agente nos ayudo con los conteos pero nosotros lo verificamos |
+| Respuestas de `streaming_design.md` | No | Se respondieron las preguntas de acuerdo a los resultados |
+| Parte opcional de Kinesis | No realizada | El rol de AWS Academy no autoriza kinesis:CreateStream |

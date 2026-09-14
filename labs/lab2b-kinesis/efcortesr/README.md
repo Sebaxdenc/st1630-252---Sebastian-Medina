@@ -3,13 +3,13 @@
 **Estudiantes:** Emmanuel Cortes, Sara Hurtado, Juan Jose Osorio y Mariana Sanchez  
 **Fecha de ejecucion:** 2026-09-13  
 **Fuente obligatoria:** Kafka  
-**Parte opcional Kinesis:** no realizada; AWS Academy nego `kinesis:CreateStream`
+**Parte opcional Kinesis:** no realizada; AWS Academy nego kinesis:CreateStream
 
 ## Configuracion
 
 La ejecucion local usa Ubuntu WSL, Java 17, Python 3.12, Spark 3.5.6 y
 Delta Lake 3.3.3. Kafka corre en Docker con cuatro particiones para el
-topic `pedidos-ventas`.
+topic pedidos-ventas.
 
 Desde PowerShell:
 
@@ -36,7 +36,7 @@ python labs/lab2b-kinesis/efcortesr/scripts/streaming_pipeline.py
 
 El pipeline lee el JSON desde Kafka, agrega ventas y cantidad de pedidos
 por region en ventanas, y escribe los resultados mediante
-`foreachBatch` y `MERGE` en Delta Lake.
+foreachBatch y MERGE en Delta Lake.
 
 ## Resultado verificado
 
@@ -47,14 +47,14 @@ por region en ventanas, y escribe los resultados mediante
 - Dos publicaciones cayeron en la misma ventana: el segundo batch actualizo
   sus 6 filas existentes sin crear nuevas claves.
 - La verificacion encontro 0 claves duplicadas por
-  `(window_start, window_end, region)`.
+  (window_start, window_end, region).
 - Spark, Delta y el conector de Kafka cargaron correctamente.
 
-La evidencia tecnica se puede repetir con:
+La evidencia tecnica:
 
 ```bash
 python labs/lab2b-kinesis/scripts/check_environment.py
 ```
 
-Las respuestas y decisiones del equipo estan en `streaming_design.md`.
-La declaracion de uso de IA esta en `bitacora_delegacion.md`.
+Las respuestas y decisiones del equipo estan en streaming_design.md.
+La declaracion de uso de IA esta en bitacora_delegacion.md.
