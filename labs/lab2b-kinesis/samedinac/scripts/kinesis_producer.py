@@ -78,8 +78,13 @@ def main():
         time.sleep(0.1)  # ~10 pedidos/segundo
 
     print(f"✅ {N_PEDIDOS} pedidos enviados a Kinesis")
+    # Este script usa put_record() (singular), así que la métrica de
+    # CloudWatch que registra estos envíos es "PutRecord" (singular),
+    # NO "PutRecords" (plural, que corresponde a la API put_records de
+    # envío por lotes). Mirar el dashboard equivocado no mostraría
+    # actividad de este productor.
     print("\nVerifica en AWS Console: Kinesis → "
-          f"{STREAM} → Monitoring → PutRecords success rate (debería ser 100%)")
+          f"{STREAM} → Monitoring → PutRecord success rate (debería ser 100%)")
 
 
 if __name__ == "__main__":

@@ -2,17 +2,12 @@
 
 **Estudiante:** Sebastian Andres Medina Cabezas
 **Fecha de ejecucion:** 13/09/2026
-**Parte opcional Kinesis (Parte 4):** 
+**Parte opcional Kinesis (Parte 4):** Hecho 
 
 
 ## Ejecucion 
 
 Con el Kafka del Lab 2a corriendo y el topic `pedidos-ventas` con datos:
-
-```powershell
-$env:JAVA_HOME = "C:\Program Files\Java\jdk-21"
-& .\.venv\Scripts\python.exe samedinac\scripts\streaming_pipeline.py
-```
 
 El pipeline lee el JSON desde Kafka, agrega ventas totales y cantidad de
 pedidos por region en ventanas de 5 minutos (watermark de 10 minutos), y
@@ -32,12 +27,6 @@ con llave idempotente `(window_start, window_end, region)`.
 - Al finalizar se elimino el stream con `aws kinesis delete-stream` para
   no consumir creditos (paso 4.6).
 
-## Limpieza de recursos (paso 4.6)
-
-```powershell
-aws kinesis delete-stream --stream-name pedidos-ventas-kinesis --region us-east-1
-aws kinesis list-streams --region us-east-1
-```
 
 ## Documentos relacionados
 
